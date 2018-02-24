@@ -17,19 +17,19 @@
         };
         firebase.initializeApp(config);
         var database = firebase.database()
+        var ref = firebase.database().ref('demo');
+        var obj = []
         return {
-            sum: sum,
-            checkConFirebase: checkConFirebase
+            checkConFirebase: checkConFirebase,
+            addEmp: addEmp
         };
 
         function checkConFirebase() {
-            var ref = firebase.database().ref();
-            return $firebaseObject(ref);
+            return $firebaseArray(ref)
         }
 
-        function sum(param1, param2) {
-            var result = parseInt(param1) + parseInt(param2)
-            return result
+        function addEmp(params) {
+            $firebaseArray(ref).$add(params)
         }
     }
 })();

@@ -3,12 +3,12 @@ angular.module('starterApp', ['ngRoute','ngTable','ngSanitize','firebase']).conf
 function ApplicationConfig($routeProvider, $locationProvider) {
 
   $routeProvider.when('/', {
-  }).when('/profile', {
-    templateUrl: 'component/profile.html',
-    controller: 'profileController as el'
-  }).when('/register', {
-    templateUrl: 'component/register.html',
-    controller: 'registerController'
+  }).when('/dashboard', {
+    templateUrl: 'component/dashboard.html',
+    controller: 'dashboardController as el'
+  }).when('/add-employee', {
+    templateUrl: 'component/add-employee.html',
+    controller: 'addEmployeeController as el'
   }).when('/', {
     templateUrl: 'component/home.html',
     controller: 'homeController as el'

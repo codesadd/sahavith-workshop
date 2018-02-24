@@ -10,7 +10,9 @@
     function login(user, pass) {
       $location.path("/profile");
     }
-
+    
     $scope.database = functionService.checkConFirebase();
+    console.log($scope.database);
+    
   }
 })();
